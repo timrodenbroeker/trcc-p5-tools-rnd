@@ -1,0 +1,31 @@
+<head>
+
+</head>
+
+<body>
+<div id="ui">
+	<input type="text" id="txt" value="" placeholder="your name">
+</div>
+<div id="canvasWrapper"></div>
+
+<script src="../vendor/p5.js"></script>
+<script>
+
+var txt = document.getElementById("txt");
+
+function setup() {
+	var c = createCanvas(500,500);
+	c.parent("canvasWrapper");
+}
+
+function draw()  {
+	background("#aaaaaa");
+	noStroke();
+	fill("#0000ff");	
+    textAlign(CENTER,CENTER);
+    textSize(50);
+    text(txt.value,width/2,height/2);
+}
+
+</script>
+</body>

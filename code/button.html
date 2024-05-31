@@ -1,0 +1,33 @@
+<head>
+
+</head>
+
+<body>
+<div id="ui">
+	<button onclick="randomColor()">Randomize background</button>
+</div>
+<div id="canvasWrapper"></div>
+
+<script src="../vendor/p5.js"></script>
+<script>
+
+var bg = 100;
+
+function setup() {
+	var c = createCanvas(500,500);
+	c.parent("canvasWrapper");
+}
+
+function draw()  {
+	background(bg);
+	noStroke();
+	fill("#0000ff");
+	circle(width/2,height/2,400);
+}
+
+function randomColor(){
+	bg = random(255);
+}
+
+</script>
+</body>

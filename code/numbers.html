@@ -1,0 +1,41 @@
+<head>
+
+</head>
+
+<body>
+<div id="ui">
+	<input type="number" id="tilesX" value="10" min="1" max="16">
+	<input type="number" id="tilesY" value="10" min="1" max="16">
+</div>
+<div id="canvasWrapper"></div>
+
+<script src="../vendor/p5.js"></script>
+<script>
+
+
+function setup() {
+	var c = createCanvas(500,500);
+	c.parent("canvasWrapper");
+}
+
+function draw()  {
+	background(255);
+	var tilesX = document.getElementById("tilesX");
+	var tilesY = document.getElementById("tilesY");
+	var elsX = tilesX.value;
+	var elsY = tilesY.value;
+	var tileW = width / elsX;
+	var tileH = height / elsY;
+	var counter = 0;	
+	for (var x = 0; x < elsX; x++) {
+		for (var y = 0; y < elsY; y++) {
+			if (counter % 3 == 0) {
+				rect(x * tileW, y * tileH, tileW, tileH);
+			}
+			counter ++;
+		}
+	}
+}
+
+</script>
+</body>

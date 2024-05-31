@@ -1,0 +1,29 @@
+<head>
+
+</head>
+
+<body>
+<div id="ui">
+	<input type="range" id="slider" value="250" min="0" max="500">
+</div>
+<div id="canvasWrapper"></div>
+
+<script src="../vendor/p5.js"></script>
+<script>
+
+var slider = document.getElementById("slider");
+
+function setup() {
+	var c = createCanvas(500,500);
+	c.parent("canvasWrapper");
+}
+
+function draw()  {
+	background("#aaaaaa");
+	noStroke();
+	fill("#0000ff");	
+	circle(width/2,height/2,slider.value);
+}
+
+</script>
+</body>

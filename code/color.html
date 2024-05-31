@@ -1,0 +1,28 @@
+<head>
+
+</head>
+
+<body>
+<div id="ui">
+	<input type="color" id="colorPicker" value="#0000ff" placeholder="">
+</div>
+<div id="canvasWrapper"></div>
+
+<script src="../vendor/p5.js"></script>
+<script>
+
+var colorPicker = document.getElementById("colorPicker");
+
+function setup() {
+	var c = createCanvas(500,500);
+	c.parent("canvasWrapper");
+}
+
+function draw()  {
+	background("#aaaaaa");
+	noStroke();
+	fill(colorPicker.value);	
+    	circle(width/2,height/2,400);
+}
+
+</script>
